@@ -36,5 +36,6 @@ jobs:
               --debug \
               --errors \
               --show-version \
-              -Daether.connector.requestTimeout=270000 \
+              -Daether.connector.connectTimeout=60000 \
+              -Daether.connector.requestTimeout=180000 \
               verify
