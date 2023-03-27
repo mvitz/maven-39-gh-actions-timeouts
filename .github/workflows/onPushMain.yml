@@ -2,7 +2,6 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -36,6 +35,6 @@ jobs:
               --debug \
               --errors \
               --show-version \
-              -Daether.connector.connectTimeout=60000 \
-              -Daether.connector.requestTimeout=180000 \
+              -Dmaven.resolver.transport=wagon \
+              -Dmaven.wagon.httpconnectionManager.ttlSeconds=180 \
               verify
